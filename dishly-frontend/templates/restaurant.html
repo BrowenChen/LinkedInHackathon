@@ -1,0 +1,153 @@
+  
+<section id="menu">
+
+    <nav>
+      <ul>
+        <li data-view="ratings" class="linky">ratings</li>
+        <li data-view="menu" class="linky">menu</li>
+        <li data-view="about" class="linky">about</li>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <div class="graph-sub graph" id="sub-1">
+        <div id="chartdiv" style="width:99%; height:300px;"></div>
+      </div> <!-- end sub-1 -->
+
+      <div class="sub ratings" id="sub-2">
+        <div class="col-1">
+            <div class="left-container animated fadeIn">
+                <header>
+                    <% console.log(menu) %>
+                    <h4> <%= menu[0].attributes.name %> top menu items </h4>
+                </header>
+                <section>
+
+                    <div class="first-row">
+                        <div class="card">
+                          <img src="img/food/burger.jpg">
+                        </div>
+                        <div class="card">
+                          <img src="img/food/pizza.jpg">
+                        </div>
+                        <div class="card">
+                          <img src="img/food/sushi.jpg">
+                        </div>
+                        <span class="stretch"></span>
+                    </div>
+
+                    <div class="second-row">
+
+                        <!-- Second row -->
+                        <div class="card">
+                          <img src="img/food/roll.jpg">
+                        </div>
+
+                        <div class="card">
+                          <img src="img/food/chicken.jpg">
+                        </div>
+
+                        <div class="card">
+                          <img src="img/food/tacos.jpg">
+
+                        </div>
+                        <span class="stretch"></span>
+                    </div>
+                </section>
+                <footer>
+                    <p> Sorted by most positively reviewed dishes </p>
+                </footer>
+
+            </div>
+        </div>
+
+
+        <div class="col-2">
+            <div class="right-container animated fadeIn">
+                <header>
+                    <h4>Details</h4>
+                </header>
+                <section>
+                    <!-- <div id="chartdiv" style="width:99%; height:85%;"></div> -->
+                    <div style="position: absolute; left: 25%; right: 25%; top: 25%;">
+                      Hamburger <br>
+                      12 dollars <br>
+                      Milpitas <br>
+                      90 percent positive sentiment <br>
+                    </div>
+
+                    <div class="bottom-button">
+                        <button id="graph-button">Show data</button>
+                    </div>
+                </section>
+                <footer>
+                    <p> Details of food </p>
+                </footer>
+            </div>
+        </div>
+
+
+
+
+
+      </div> <!-- end sub-2 -->
+
+      <div class="sub menu" id="sub-3">
+        <div class="col-1">
+                <div class="left-container second animated fadeIn">
+                    <header id="full-list-header">
+                        <h4> <%= menu[0].attributes.name %> Full Menu List </h4>
+                        <% JSON.parse(menu[0].attributes.menu).items %>
+                    </header>
+                    <section>
+                        <ul>
+                            <% JSON.parse(menu[0].attributes.menu).items.forEach(function(item, index) { %>
+                                <li class="list selected">
+                                    <img src="/img/food/cupcake.png"> </img>
+                                    <div class="description">
+                                        <div class="food-title"><%= item.name %></div>
+                                        <div class="food-description"> 4 dollars, positive, mountain View,</div>
+                                    </div>
+
+                                    <div class="stars">
+                                      <span></span>
+                                    </div>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </section>
+                    <footer>
+                        <p> Sorted by most positively reviewed dishes </p>
+                    </footer>
+                </div>
+            </div>
+
+      </div>
+
+      </div> <!-- end sub-3 -->
+      <div class="sub about" id="sub-4">
+        <div class="about-wrapper">
+
+        </div>
+      </div> <!-- end sub-4 -->
+
+
+
+
+      <div id="sub-5"></div> <!-- end sub-5 -->
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+</section>
+

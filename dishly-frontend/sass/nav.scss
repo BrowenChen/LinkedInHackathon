@@ -1,0 +1,118 @@
+#nav {
+
+  $nav-background: white;
+  $logo-primary: #32495a;
+  $logo-secondary: #32495a;
+  $base-green: #32495a;
+
+  background: $nav-background;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  overflow: hidden;
+  border-bottom: solid 1px $base-green;
+
+  .nav-logo {
+    margin-left: 15px;
+    width: 100%;
+
+
+    a {
+      width: 120px;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+    }
+
+    .icon {
+      height: 40px;
+      font-size: 30px;
+      margin-right: 10px;
+      line-height: 80px;
+      -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+      transition: all 0.5s;
+    }
+    a:hover .icon {
+      color: green;
+      font-size: 35px;
+      margin-right: 8px;
+    }
+    p {
+      color: $logo-primary;
+      font-size: 25px;
+      span {
+        color: $logo-secondary;
+      }
+    }
+  }
+
+  .nav-form-wrap {
+    margin-right: 10px;
+    position: relative;
+    width: 700px;
+
+    form {
+      float: right;
+      width: 50%;
+      -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+      transition: all 0.5s;
+
+      &:hover {
+        width: 100%;
+        .search-icon {
+          left: 10px;
+          margin-left: 0;
+        }
+      }
+
+      .search-icon {
+        left: 50%;
+        margin-left: 10px;
+      }
+    }
+
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    .search-input {
+      width: 100%;
+      font-size: 20px;
+      padding: 5px;
+      border: solid 1px $base-green;
+      padding-left: 35px;
+    }
+    .search-icon {
+       -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+      transition: all 0.5s;
+
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      color: #A5E1D5;
+    }
+    .search-submit {
+      background-color: $base-green;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      border-radius:0;
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+      border: none;
+      height: 34px;
+      padding-left: 10px;
+      padding-right: 10px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+  }
+}
+
+$green-fade: #A5E1D5;
+

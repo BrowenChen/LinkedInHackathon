@@ -1,0 +1,54 @@
+
+<section id="home" class="sub-section">
+  <div class="banner">
+    <h1 class="animated bounce">Ranking the top dishes at the restaurants you love.</h1>
+  </div>
+  <div class="filter">
+    <div class="sort-catagory">
+      <p>Sort by:</p>
+      <ul>
+        <li><i class="light-green fa fa-coffee"></i></li>
+        <li><i class="light-orange fa fa-cutlery"></i></li>
+        <li><i class="light-red fa fa-beer"></i></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content" data-animation="flipInX" data-timeout="400">
+    <ul class="restaurant-container">
+      <% restaurants.forEach(function(restaurant, index) { %>
+        <li class="restaurant-card selected animated fadeIn _4">
+          <div class="restaurant-image">
+            <% if (index < 20) {%>
+              <img src="/img/restaurants/<%= index %>.jpeg">
+            <% }; %>
+
+            <% if (index >= 20) {%>
+              
+              <img src="/img/restaurants/<%= index%20 %>.jpeg">
+            <% }; %>
+          </div>
+          <div class="restaurant-description">
+            <div class="heading">
+              <i class="icon fa fa-dot-circle-o"></i>
+              <h2><%= restaurant.attributes.name %></h2>
+            </div>
+            <p class="description">located at <%= restaurant.attributes.location %>, this restaurant is <%= restaurant.attributes.yelpRating %></p>
+            <div class="footer">
+              <span class="pill">rating: 5<i class="fa fa-star"></i></span>
+              <span class="pill"># reviews: <%= restaurant.attributes.numReviews %></span>
+              <span class="pill">last reviewed: <%= restaurant.attributes.dateLastReviewed.split(':')[0] %></span>
+              <a href="#/restaurant/<%= restaurant.attributes._id %>">see more <i class="fa fa-caret-right"></i></a>
+            </div>
+          </div>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+
+
+
+    </ul>
+  </div>
+</section>
